@@ -3,16 +3,16 @@ import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import { Button } from "../style/Button";
 
-const HeroSection = () => {
+const HeroSection = ({name,image}) => {
 
   return (
     <Wrapper>
       <div className="container grid grid-two-column">
-        <div className="section-hero-data">
+        <div className="section-hero-data"> 
           <p className="hero-top-data">THIS IS ME</p>
-          <h1 className="hero-heading">Dbsmandal Portfolio</h1>
+          <h1 className="hero-heading">{name}</h1>
           <p className="hero-para">
-            I'm Dbsmandal. A Full stack Developer, youtuber and freelancer. A Full
+            I'm {name}. A Full stack Developer, youtuber and freelancer. A Full
             stack Developer, youtuber and freelancer.
           </p>
           <Button className="btn hireme-btn">
@@ -23,7 +23,7 @@ const HeroSection = () => {
         {/* for image  */}
         <div className="section-hero-image">
           <picture>
-            <img src="./images/hero.svg" alt="hero image" className="hero-img " />
+            <img src={image} alt="hero image" className="hero-img " />
           </picture> 
         </div>
       </div>
