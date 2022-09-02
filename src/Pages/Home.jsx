@@ -1,17 +1,60 @@
-import React from 'react'
-import HeroSection from '../Component/HeroSection'
+import { useEffect } from "react";
+import HeroSection from "../Component/HeroSection";
+import { useGlobalContext } from "../Context";
 
 const Home = () => {
-  const data={
-    name:"Dbsmandal Portfolio",
-    image:"./images/hero.svg"
-  }
-  return (
-    <div>
-      <HeroSection {...data}/>
-    </div>
-  )
-}
+  const { updateHomePage } = useGlobalContext();
 
-export default Home 
+  useEffect(() => updateHomePage(), []);
+
+  return <HeroSection />;
+};
+
+export default Home;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//using props its easy ways to create this page ata time
+
+
+// import React from 'react'
+// import HeroSection from '../Component/HeroSection'
+
+// const Home = () => {
+//   const data={
+//     name:"Dbsmandal Portfolio",
+//     image:"./images/hero.svg"
+//   }
+//   return (
+//     <div>
+//       <HeroSection {...data}/>
+//     </div>
+//   )
+// }
+
+// export default Home 
   
