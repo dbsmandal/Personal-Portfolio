@@ -2,9 +2,10 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import { Button } from "../style/Button";
+import { useGlobalContext } from "../Context";
 
 const HeroSection = ({name,image}) => {
-
+  const { fname, age } = useGlobalContext();
   return (
     <Wrapper>
       <div className="container grid grid-two-column">
@@ -12,7 +13,7 @@ const HeroSection = ({name,image}) => {
           <p className="hero-top-data">THIS IS ME</p>
           <h1 className="hero-heading">{name}</h1>
           <p className="hero-para">
-            I'm {name}. A Full stack Developer, youtuber and freelancer. A Full
+            I'm {fname} ,my age is {age}. A Full stack Developer, youtuber and freelancer. A Full
             stack Developer, youtuber and freelancer.
           </p>
           <Button className="btn hireme-btn">
@@ -30,7 +31,7 @@ const HeroSection = ({name,image}) => {
     </Wrapper>
   );
 };
-
+ 
 const Wrapper = styled.section`
   padding: 9rem 0;
 
