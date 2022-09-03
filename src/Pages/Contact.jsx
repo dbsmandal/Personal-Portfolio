@@ -4,10 +4,20 @@ import styled from "styled-components";
 const Contact = () => {
   const Wrapper = styled.section`
     padding: 9rem 0 5rem 0;
-
+    .common-heading {
+      font-size: 3.8rem;
+      font-weight: 600;
+      margin-bottom: 6rem;
+      text-transform: capitalize;
+      text-align: center;
+      
+  }
     .container {
       margin-top: 6rem;
       text-align: center;
+      border: 1px solid;
+      border-color: skyblue;
+      padding: 2rem;
 
       .contact-form {
         max-width: 50rem;
@@ -40,12 +50,11 @@ const Contact = () => {
       }
     }
   }
-  .common-heading{
-    text-align: center;
-    margin: 2rem;
-    font-size: 3rem;
-    text-transform: capitalize;
-  }
+  .container .contact-form .contact-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
 
   `;
 
