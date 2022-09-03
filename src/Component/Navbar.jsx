@@ -2,8 +2,13 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import { CgMenu, CgCloseR } from "react-icons/cg";
+import { useAuth0 } from "@auth0/auth0-react";
+import { Button } from "../style/Button";
+
 
 const Navbar = () => {
+  const { loginWithRedirect, isAuthenticated, logout,user } = useAuth0();
+
   const [openMenu, setOpenMenu] = useState(false);
 
   const Nav = styled.nav`
@@ -151,22 +156,27 @@ const Navbar = () => {
               Contact
             </NavLink>
           </li>
-          <li>
-            <NavLink
-              className="navbar-link"
-              onClick={() => setOpenMenu(false)}
-              to="/SignIn">
-              SignIn
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              className="navbar-link"
-              onClick={() => setOpenMenu(false)}
-              to="/LogIn">
-              LogIn
-            </NavLink>
-          </li>
+        
+          {isAuthenticated && (
+            <li>
+              <p> {user.name} </p>
+            </li>
+          )}
+
+          {isAuthenticated ? (
+            <li>
+              <Button
+                onClick={() => logout({ returnTo: window.location.origin })}>
+                Log Out
+              </Button>
+            </li>
+          ) : (
+            <li>
+              <Button onClick={() => loginWithRedirect()}>Log In</Button>
+            </li>
+          )}
+         
+
 
         </ul>
         {/* //nav icon */}

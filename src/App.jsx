@@ -3,9 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import About from './Pages/About'
 import Contact from './Pages/Contact'
 import Home from './Pages/Home'
-import LogIn from './Pages/LogIn'
 import MySkills from './Pages/MySkills'
-import SignIn from './Pages/SignIn'
 import Header from './Component/Header'
 import Footer from './Component/Footer'
 import Error from './Pages/Error'
@@ -41,8 +39,6 @@ const App = () => {
         <Route path='/About' element={<About/>}/>
         <Route path='/MySkills' element={<MySkills/>}/>
         <Route path='/Contact' element={<Contact/>}/>
-        <Route path='/SignIn' element={<SignIn/>}/>
-        <Route path='/LogIn' element={<LogIn/>}/>
         <Route path='*' element={<Error/>}/>
 
       </Routes>
