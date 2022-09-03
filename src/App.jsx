@@ -8,6 +8,7 @@ import Services from './Pages/Services'
 import SignIn from './Pages/SignIn'
 import Header from './Component/Header'
 import Footer from './Component/Footer'
+import Error from './Pages/Error'
 import {ThemeProvider} from 'styled-components'
 
 const App = () => {
@@ -42,6 +43,8 @@ const App = () => {
         <Route path='/Contact' element={<Contact/>}/>
         <Route path='/SignIn' element={<SignIn/>}/>
         <Route path='/LogIn' element={<LogIn/>}/>
+        <Route path='*' element={<Error/>}/>
+
       </Routes>
       <Footer/>
     </BrowserRouter>
