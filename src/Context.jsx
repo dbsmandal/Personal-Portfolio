@@ -8,7 +8,7 @@ const API = "https://thapareactapi.up.railway.app";
 const intialState = {
   name: "",
   image: "",
-  services: [],
+  MySkills: [],
 
 };
 

@@ -4,7 +4,7 @@ import About from './Pages/About'
 import Contact from './Pages/Contact'
 import Home from './Pages/Home'
 import LogIn from './Pages/LogIn'
-import Services from './Pages/Services'
+import MySkills from './Pages/MySkills'
 import SignIn from './Pages/SignIn'
 import Header from './Component/Header'
 import Footer from './Component/Footer'
@@ -39,7 +39,7 @@ const App = () => {
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/About' element={<About/>}/>
-        <Route path='/Services' element={<Services/>}/>
+        <Route path='/MySkills' element={<MySkills/>}/>
         <Route path='/Contact' element={<Contact/>}/>
         <Route path='/SignIn' element={<SignIn/>}/>
         <Route path='/LogIn' element={<LogIn/>}/>

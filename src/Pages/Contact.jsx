@@ -3,20 +3,19 @@ import styled from "styled-components";
 
 const Contact = () => {
   const Wrapper = styled.section`
-    padding: 9rem 0 5rem 0;
+    margin-left: 1rem;
+    margin-right: 1rem;
+   
     .common-heading {
       font-size: 3.8rem;
       font-weight: 600;
-      margin-bottom: 6rem;
+      margin-bottom: 2rem;
       text-transform: capitalize;
       text-align: center;
-      
   }
     .container {
-      margin-top: 6rem;
+      margin-top: 2rem;
       text-align: center;
-      border: 1px solid;
-      border-color: skyblue;
       padding: 2rem;
 
       .contact-form {
@@ -28,34 +27,49 @@ const Contact = () => {
           flex-direction: column;
           gap: 3rem;
 
-          .input1{
-            height: 3rem;
-            width: auto
-            font-size:3 rem
-
+          
+          
         
-
-          input[type="submit"] {
-            cursor: pointer;
-            transition: all 0.2s;
-
-            &:hover {
-              background-color: ${({ theme }) => theme.colors.white};
-              border: 1px solid ${({ theme }) => theme.colors.btn};
-              color: ${({ theme }) => theme.colors.btn};
-              transform: scale(0.9);
-            }
-          }
-        }
-      }
+      
     }
   }
+  .container .contact-form .contact-inputs input[type="submit"] {
+    cursor: pointer;
+    transition: all 0.2s ease 0s;
+}
   .container .contact-form .contact-inputs {
     display: flex;
     flex-direction: column;
     gap: 3rem;
 }
-
+input[type="submit"] {
+  max-width: 16rem;
+  margin-top: 2rem;
+  background-color: rgb(98, 84, 243);
+  color: rgb(255, 255, 255);
+  padding: 1.4rem 2.2rem;
+  border-style: solid;
+  border-width: 0.1rem;
+  text-transform: capitalize;
+  font-size: 1.8rem;
+  cursor: pointer;
+  &:hover {
+    background-color: ${({ theme }) => theme.colors.white};
+    border: 1px solid ${({ theme }) => theme.colors.btn};
+    color: ${({ theme }) => theme.colors.btn};
+    transform: scale(0.9);
+  }
+}
+input, textarea {
+  max-width: 50rem;
+  color: rgb(33, 37, 41);
+  padding: 1.6rem 2.4rem;
+  border: 1px solid rgba(98, 84, 243, 0.5);
+  text-transform: capitalize;
+  box-shadow: rgb(0 0 0 / 16%) 0px 1px 4px;
+  font-size: 2rem;
+}
+ 
   `;
 
   return (
@@ -66,9 +80,7 @@ const Contact = () => {
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14435.909441172013!2d87.8466875!3d25.2376875!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3f87e82ba80a9c1c!2sKataha%20Diara%20High%20School%20(H.S.)%2C!5e0!3m2!1sen!2sin!4v1662190901123!5m2!1sen!2sin"
         width="100%"
-        height="450"
-        style={{ border: "5px solid skyblue"
-        }}
+        height="500" 
         allowFullScreen=""
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade">
@@ -81,17 +93,16 @@ const Contact = () => {
             action="https://formspree.io/f/mbjbdjqz"
             method="POST"
             className="contact-inputs">
-            <input className="input1"
+            <input 
               type="text"
               name="username"
               placeholder="username"
-              style={{    fontSize: 30}}
               autoComplete="off"
               required
             />
 
-            <input className="input1"
-                style={{    fontSize: 30}}
+            <input 
+           
               type="email"
               name="Email"
               placeholder="Email"
@@ -99,8 +110,8 @@ const Contact = () => {
               required
             />
 
-            <textarea className="input1"
-                style={{    fontSize: 30}}
+            <textarea 
+                
               name="message"
               placeholder="Write your Meassage"
               cols="10"
@@ -108,8 +119,7 @@ const Contact = () => {
               autoComplete="off"
               required></textarea>
 
-            <input  style={{fontSize: 30 ,height:70, backgroundColor:"skyblue", 
-            transform: 0.9}} className="input" type="submit" value="send" />
+            <input className="input" type="submit" value="send" />
           </form>
         </div>
       </div>
