@@ -1,17 +1,16 @@
 import { useEffect } from "react";
 import HeroSection from "../Component/HeroSection";
 import { useGlobalContext } from "../Context";
-import MySkills from './MySkills'
 import Contact from "../Pages/Contact"
 
 const Home = () => {
   const { updateHomePage } = useGlobalContext();
-
+ 
   useEffect(() => updateHomePage(), []);
 
   return <>
   <HeroSection />
-  <MySkills/>
+
   <Contact/>
   
   </>;

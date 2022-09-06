@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState} from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import About from './Pages/About'
 import Contact from './Pages/Contact'
@@ -10,6 +10,8 @@ import Error from './Pages/Error'
 import {ThemeProvider} from 'styled-components'
 
 const App = () => {
+
+
   const theme = {
     colors: {
       heading: "rgb(24 24 29)",
@@ -34,13 +36,14 @@ const App = () => {
     <ThemeProvider theme={theme}>
     <BrowserRouter>
     <Header/>
+    
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/About' element={<About/>}/>
-        <Route path='/MySkills' element={<MySkills/>}/>
+        <Route path='/MySkills' element={ <MySkills/>}/>
         <Route path='/Contact' element={<Contact/>}/>
         <Route path='*' element={<Error/>}/>
-
+  
       </Routes>
       <Footer/>
     </BrowserRouter>

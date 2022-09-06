@@ -5,15 +5,15 @@ import { Button } from "../style/Button";
 import { useGlobalContext } from "../Context";
 
 const HeroSection = () => {
-  const { name, image } = useGlobalContext();  return (
+  const { name, image } = useGlobalContext();  
+  return (
     <Wrapper>
       <div className="container grid grid-two-column">
         <div className="section-hero-data"> 
-          <p className="hero-top-data">THIS IS ME</p>
+          <p className="hero-top-data">THIS IS ME</p> 
           <h1 className="hero-heading">{name}</h1>
           <p className="hero-para">
-            I'm {name} ,my age is 25. A Full stack Developer, youtuber and freelancer. A Full
-            stack Developer, youtuber and freelancer.
+            I'm {name} ,my age is 25. A Frontend Developer and freelancer. A Frontend Developer Developer and freelancer.bassically I 
           </p>
           <Button className="btn hireme-btn">
             <NavLink to="/contact"> hire me </NavLink>

@@ -139,13 +139,13 @@ const Navbar = () => {
               to="/about">
               About
             </NavLink>
-          </li>
-          <li>
+            </li>
+            <li>
             <NavLink
               className="navbar-link"
-              onClick={() => setOpenMenu(false)}
+              onClick={() => setOpenMenu(true)}
               to="/MySkills">
-              My_Skills
+              My Skills
             </NavLink>
           </li>
           <li>
