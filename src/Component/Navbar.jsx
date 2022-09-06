@@ -6,6 +6,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 import { Button } from "../style/Button";
 
 
+
 const Navbar = () => {
   const { loginWithRedirect, isAuthenticated, logout,user } = useAuth0();
 
