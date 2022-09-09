@@ -47,6 +47,11 @@ const App = () => {
         <Route path='/MySkills' element={ <MySkills/>}/>
         <Route path='/Contact' element={<Contact/>}/>
         <Route path='*' element={<Error/>}/>
+        <Route path='/https://formspree.io/thanks?language=en' element={<Contact/>}/>
+        <Route path='/https://dbsmandalportfolio.netlify.app/contact' element={<Contact/>}/>
+
+
+
   
       </Routes>
       <Footer/>
