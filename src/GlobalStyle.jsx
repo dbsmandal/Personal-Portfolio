@@ -80,7 +80,7 @@ li {
 
 .grid {
   display: grid;
-  gap: 9rem;
+  gap: 6rem;
 }
 
 .grid-two-column {

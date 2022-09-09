@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React   from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import About from './Pages/About'
 import Contact from './Pages/Contact'
@@ -7,7 +7,9 @@ import MySkills from './Pages/MySkills'
 import Header from './Component/Header'
 import Footer from './Component/Footer'
 import Error from './Pages/Error'
+import GoToTop from "./Component/GoToTop"
 import {ThemeProvider} from 'styled-components'
+import { GlobalStyle } from './GlobalStyle'
 
 const App = () => {
 
@@ -34,6 +36,8 @@ const App = () => {
   };
   return (
     <ThemeProvider theme={theme}>
+      <GlobalStyle/>
+      <GoToTop/>
     <BrowserRouter>
     <Header/>
     

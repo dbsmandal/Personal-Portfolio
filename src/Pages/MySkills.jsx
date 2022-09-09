@@ -21,26 +21,12 @@ const MySkills = () => {
 
 
   return (
-    <Wrapper>
-    <div>
-      <h1 className="common-heading">======My Skills======</h1>
       <Cardnew details={Skill_section}/>
-    </div>
-    </Wrapper>
   )
 }
-const Wrapper=styled.section`
-.common-heading {
-  font-size: 3.8rem;
-  font-weight: 600;
-  margin-bottom: 2rem;
-  text-transform: capitalize;
-  text-align: center;
-  color: ${({ theme }) => theme.colors.btn};
 
-}
 
-`
+
 export default MySkills
 
 
